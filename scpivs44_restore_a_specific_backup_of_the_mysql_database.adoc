@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_a_specific_backup_of_the_mysql_database.html 
+keywords:  
+summary: '유지 관리 콘솔을 사용하여 SnapCenter Plug-in for VMware vSphere 의 MySQL 데이터베이스(NSM 데이터베이스라고도 함)의 특정 백업을 복원할 수 있습니다.' 
+---
+= MySQL 데이터베이스의 특정 백업을 복원합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+유지 관리 콘솔을 사용하여 SnapCenter Plug-in for VMware vSphere 의 MySQL 데이터베이스(NSM 데이터베이스라고도 함)의 특정 백업을 복원할 수 있습니다.
+
+.단계
+. 유지 관리 콘솔 창을 엽니다.
++
+link:scpivs44_access_the_maintenance_console.html["유지 관리 콘솔에 액세스"^] .
+
+. 메인 메뉴에서 *1) 애플리케이션 구성* 옵션을 입력합니다.
+. 애플리케이션 구성 메뉴에서 *6) MySQL 백업 및 복원* 옵션을 입력합니다.
+. MySQL 백업 및 복원 구성 메뉴에서 *2) MySQL 백업 나열* 옵션을 입력한 다음 복원하려는 백업을 기록해 둡니다.
+. MySQL 백업 및 복원 구성 메뉴에서 *4) MySQL 백업 복원* 옵션을 입력합니다.
+. "최신 백업을 사용하여 복원"이라는 프롬프트에서 *n*을 입력합니다.
+. "복원할 백업"이라는 프롬프트에서 백업 이름을 입력한 다음 *Enter*를 누릅니다.
++
+선택된 백업 MySQL 데이터베이스가 원래 위치로 복원됩니다.
+
+

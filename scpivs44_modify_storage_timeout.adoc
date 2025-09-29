@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_modify_storage_timeout.html 
+keywords:  
+summary: 과거에는 백업이 성공적으로 실행되었더라도 SnapCenter Plug-in for VMware vSphere 스토리지 시스템이 구성된 시간 초과 기간을 초과할 때까지 기다려야 하는 시간 동안 백업이 실패할 수 있습니다.  이러한 상황이 발생하면 구성된 시간 제한을 늘릴 수 있습니다. 
+---
+= 구성된 저장 시간 초과 수정
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+과거에는 백업이 성공적으로 실행되었더라도 SnapCenter Plug-in for VMware vSphere 스토리지 시스템이 구성된 시간 초과 기간을 초과할 때까지 기다려야 하는 시간 동안 백업이 실패할 수 있습니다.  이러한 상황이 발생하면 구성된 시간 제한을 늘릴 수 있습니다.
+
+오류가 발생할 수 있습니다 `Unable to discover resources on SCV: Unable to get storage details for datastore <xxx>…`
+
+.단계
+. SCV 플러그인의 왼쪽 탐색 창에서 *저장 시스템*을 선택합니다.
+. 스토리지 시스템 페이지에서 수정할 스토리지 시스템을 선택하고 *편집*을 선택합니다.
+. 시간 초과 필드에서 초 수를 늘립니다.
++
+
+TIP: 대규모 환경에서는 180초가 권장됩니다.
+
+

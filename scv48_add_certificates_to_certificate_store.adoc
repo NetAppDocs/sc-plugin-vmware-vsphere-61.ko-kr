@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: scv48_add_certificates_to_certificate_store.html 
+keywords:  
+summary: 인증서와 이 인증서로 서명된 아티팩트를 신뢰하려면 인증 기관의 루트 및 중간 인증서를 VMware vCenter에 추가합니다. 
+---
+= VMware 인증서 저장소에 인증서 추가
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+OVA(Open Virtual Appliance)를 설치하기 전에 vCenter에 인증서를 추가하세요.  .tar 파일에는 OVA와 Entrust 루트 및 중간 인증서가 포함되어 있으며, 인증서는 인증서 폴더에서 찾을 수 있습니다.  OVA 배포는 VMware vCenter 7u1 이상에서 지원됩니다.
+
+VMware vCenter 7.0.3 버전 이상에서는 Entrust 인증서로 서명된 OVA가 더 이상 신뢰할 수 없습니다.  문제를 해결하려면 다음 절차를 수행해야 합니다.
+
+.단계
+. vSphere Client를 사용하여 vCenter Server에 로그인합니다.
+. *관리 > 인증서 > 인증서 관리*로 이동합니다.
+. *신뢰할 수 있는 루트 저장소* 옆에서 *추가*를 선택하세요.
+. Entrust 루트 및 중간 인증서의 위치를 찾아 선택합니다.  인증서는 *신뢰할 수 있는 루트 인증서* 아래의 패널에 추가됩니다. 인증서가 설치되면 OVA를 검증하고 배포할 수 있습니다.
+
+
+
+NOTE: 다운로드한 OVA가 변조되지 않은 경우 *게시자* 열에 *신뢰할 수 있는 인증서*가 표시됩니다.

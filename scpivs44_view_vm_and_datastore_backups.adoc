@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_view_vm_and_datastore_backups.html 
+keywords:  
+summary: VM이나 데이터 저장소를 백업하거나 복원할 준비를 할 때, 해당 리소스에 대해 사용 가능한 모든 백업을 확인하고 해당 백업의 세부 정보를 보고 싶을 수 있습니다. 
+---
+= VM 및 데이터 저장소 백업 보기
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VM이나 데이터 저장소를 백업하거나 복원할 준비를 할 때, 해당 리소스에 대해 사용 가능한 모든 백업을 확인하고 해당 백업의 세부 정보를 보고 싶을 수 있습니다.
+
+.이 작업에 관하여
+10K 파일 폴더와 같은 대용량 파일 폴더를 탐색하는 데 처음에는 1분 이상 걸릴 수 있습니다.  이후의 탐색 세션에는 시간이 덜 걸립니다.
+
+.단계
+. vCenter Server에 로그인합니다.
+. *인벤토리* 페이지로 이동하여 데이터 저장소나 VM을 선택하세요.
+. 오른쪽 창에서 *구성* > * SnapCenter Plug-in for VMware vSphere* > *백업*을 선택합니다.
++
+image:backup-view.png["백업 보기"]
+
++
+정책 생성 단계에서 *보조 스냅샷 잠금 사용* 옵션이 선택되지 않으면 기본적으로 *기본 스냅샷 잠금 사용* 옵션에 설정된 값이 사용됩니다.  백업 목록에서 *보조 스냅샷 잠금 만료* 필드의 하이픈은 기본 및 보조 잠금 기간이 동일함을 나타냅니다.
+
+. 보고 싶은 백업을 선택하세요.
+

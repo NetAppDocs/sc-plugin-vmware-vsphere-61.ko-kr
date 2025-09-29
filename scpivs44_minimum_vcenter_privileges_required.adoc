@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 배포를 시작하기 전에 최소한 필요한 vCenter 권한이 있는지 확인해야 합니다. 
+---
+= 최소 vCenter 권한이 필요합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 배포를 시작하기 전에 최소한 필요한 vCenter 권한이 있는지 확인해야 합니다.
+
+
+
+== vCenter 관리자 역할에 필요한 권한
+
+데이터 저장소.공간 할당 데이터 저장소.데이터 저장소 탐색.데이터 저장소 삭제.파일 관리 데이터 저장소.데이터 저장소 이동.확장자 이름 변경.확장자 등록.확장자 등록 취소.호스트 업데이트.구성.고급 구성 호스트.구성.리소스 호스트.구성.설정 호스트.구성.저장소 호스트.로컬.VM 생성 호스트.로컬.VM 삭제 호스트.로컬.VM 재구성 네트워크.리소스 할당.권장 사항 적용 리소스.VMToPool 할당 리소스.콜드 마이그레이션 리소스.핫 마이그레이션 리소스.쿼리 VMotion 시스템.익명 시스템.읽기 시스템.작업 보기.작업 생성.업데이트 VirtualMachine.구성.기존 디스크 추가 VirtualMachine.구성.새 디스크 추가 VirtualMachine.구성.고급 구성 VirtualMachine.구성.경로에서 다시 로드 VirtualMachine.구성.디스크 제거 VirtualMachine.구성.리소스 VirtualMachine.게스트 작업.실행 VirtualMachine.GuestOperations.Modify VirtualMachine.GuestOperations.Query VirtualMachine.Interact.PowerOff VirtualMachine.Interact.PowerOn VirtualMachine.Inventory.Create VirtualMachine.Inventory.CreateFromExisting VirtualMachine.Inventory.Delete VirtualMachine.Inventory.Move VirtualMachine.Inventory.Register VirtualMachine.Inventory.Unregister VirtualMachine.State.CreateSnapshot VirtualMachine.State.RemoveSnapshot VirtualMachine.State.RevertToSnapshot
+
+
+
+== VMware vCenter용 SnapCenter 플러그인에 필요한 특정 권한
+
+|===
+
+
+| * Privileges* | *상표* 
+
+
+| netappSCV.Guest.RestoreFile | 게스트 파일 복원 
+
+
+| netappSCV.복구.마운트언마운트 | 마운트/마운트 해제 
+
+
+| netappSCV.백업.백업 작업 삭제 | 리소스 그룹/백업 삭제 
+
+
+| netappSCV.Configure.ConfigureStorageSystems.삭제 | 스토리지 시스템 제거 
+
+
+| 넷앱SCV.뷰 | 보다 
+
+
+| netappSCV.복구.복구VM | VM 복구 
+
+
+| netappSCV.Configure.ConfigureStorageSystems.AddUpdate | 스토리지 시스템 추가/수정 
+
+
+| netappSCV.백업.지금 백업 | 지금 백업하세요 
+
+
+| netappSCV.Guest.구성 | 게스트 구성 
+
+
+| netappSCV.Configure.ConfigureSnapCenterServer | SnapCenter 서버 구성 
+
+
+| netappSCV.백업.백업 예약됨 | 리소스 그룹 만들기 
+|===

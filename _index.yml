@@ -1,0 +1,45 @@
+---
+indexpage:
+  title: SnapCenter Plug-in for VMware vSphere 설명서
+  summary: SnapCenter Plug-in for VMware vSphere Linux 기반 가상 어플라이언스입니다. 독립형으로 사용할
+    경우 VM, 데이터 저장소, VMDK에 대해 빠르고 공간 효율적이며 충돌 일관성이 뛰어나고 VM 일관성이 있는 백업 및 복원 작업을 제공합니다.
+    또한 SnapCenter Server와 함께 작동하여 SnapCenter 애플리케이션별 플러그인에 대한 VMware 환경에서 애플리케이션 기반
+    백업 및 복원 작업을 지원합니다.
+  keywords: SnapCenter Plug-in for VMware vSphere, SCV
+  lead: SnapCenter Plug-in for VMware vSphere Linux 기반 가상 어플라이언스입니다. 독립형으로 사용할 경우
+    VM, 데이터 저장소, VMDK에 대해 빠르고 공간 효율적이며 충돌 일관성이 뛰어나고 VM 일관성이 있는 백업 및 복원 작업을 제공합니다.
+    또한 SnapCenter Server와 함께 작동하여 SnapCenter 애플리케이션별 플러그인에 대한 VMware 환경에서 애플리케이션 기반
+    백업 및 복원 작업을 지원합니다. 이 문서 라이브러리에서는 SnapCenter Plug-in for VMware vSphere 설명합니다.
+  tiles:
+  - title: 시작하기
+    links:
+    - title: 릴리스 노트
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464
+    - title: SCV에 대해 알아보세요
+      url: "/scpivs44_concepts_overview.html"
+    - title: 배포 요구 사항
+      url: "/scpivs44_deployment_planning_and_requirements.html"
+    - title: 빠른 시작
+      url: "/scpivs44_quick_start_overview.html"
+  - title: VM, VMDK 및 데이터 저장소 보호
+    links:
+    - title: 데이터를 보호하세요
+      url: "/scpivs44_protect_data_overview.html"
+    - title: 백업 복원
+      url: "/scpivs44_restore_from_backups_overview.html"
+    - title: REST API를 사용하세요
+      url: "/scpivs44_rest_apis_overview.html"
+  - title: 블로그 및 커뮤니티
+    links:
+    - title: NetApp 블로그 – SCV
+      url: https://blog.netapp.com/tag/snapcenter/
+    - title: NetApp 커뮤니티 – SCV
+      url: https://community.netapp.com/t5/forums/filteredbylabelpage/board-id/backup-and-restore-discussions/label-name/snapcenter
+  - title: 더 많은 리소스
+    links:
+    - title: SnapCenter 소프트웨어 설명서
+      url: https://docs.netapp.com/us-en/snapcenter/index.html
+    - title: SCV 이전 버전에 대한 설명서
+      url: https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=63240
+    - title: NetApp 지식 기반 – SCV
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter

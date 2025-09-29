@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_release_notes.html 
+keywords:  
+summary: 릴리스 노트는 라이선스 요구 사항, 알려진 문제점, 주의 사항, 제한 사항, 설명서 업데이트 또는 수정 사항을 포함하여 SnapCenter Plug-in for VMware vSphere 의 이번 릴리스에 대한 중요한 정보를 제공합니다. 
+---
+= SnapCenter Plug-in for VMware vSphere 릴리스 노트
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 에서 사용할 수 있는 새롭고 향상된 기능에 대해 알아보세요.
+
+알려진 문제, 제한 사항 및 해결된 문제에 대한 자세한 내용은 다음을 참조하세요. https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464["SnapCenter Plug-in for VMware vSphere 릴리스 노트"^] . 릴리스 노트에 액세스하려면 NetApp 계정으로 로그인하거나 계정을 만들어야 합니다.
+
+[NOTE]
+====
+지원되는 버전에 대한 최신 정보는 NetApp Interoperability Matrix Tool을 참조하세요.(http://mysupport.netapp.com/matrix["IMT"^] ).
+
+====

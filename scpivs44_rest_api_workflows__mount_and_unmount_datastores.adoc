@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__mount_and_unmount_datastores.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 사용하여 데이터스토어 백업에 대한 마운트 및 마운트 해제 작업을 수행하려면 규정된 REST API 호출 순서를 따라야 합니다. 
+---
+= 데이터 저장소를 마운트 및 마운트 해제하기 위한 REST API 워크플로
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 사용하여 데이터스토어 백업에 대한 마운트 및 마운트 해제 작업을 수행하려면 규정된 REST API 호출 순서를 따라야 합니다.
+
+각 REST API에 대해 다음을 추가합니다. `\https://<server>:<port>` REST API의 전면에 위치하여 완전한 엔드포인트를 형성합니다.
+
+
+
+== 데이터 저장소를 마운트하려면 다음 워크플로를 따르세요.
+
+|===
+| 단계 | REST API | 댓글 
+
+
+| 1 | 로 가다 `\http://<vCenter-IP>/mob` | 자세한 데이터 저장소는 VMware Managed Objects URL에서 확인하세요.  마운트하려는 데이터 저장소에 대한 *moref*를 참고하세요. 
+
+
+| 2 | `/4.1/datastores/{moref}/
+backups` | `Get the list of backups for a datastore`지정된 데이터 저장소에 대한 백업 목록을 가져옵니다.  1단계의 *moref*를 전달하세요.  마운트하려는 *backupId*를 기록해 두세요. 
+
+
+| 3 | `/4.1/datastores/backups/
+{backupId}/snapshotlocators` | `Get the list of Snapshot Locations`지정된 백업의 위치에 대한 세부 정보를 가져옵니다.  2단계의 *backupId*를 전달합니다.  *데이터 저장소*와 *snapshotLocationsList* 목록의 위치를 기록해 두세요. 
+
+
+| 4 | `/4.1/datastores/{moref}/
+availableEsxHosts` | `Get the list of Available Esxi Hosts`마운트 작업에 사용할 수 있는 ESXi 호스트 목록을 가져옵니다.  1단계의 *moref*를 전달하세요.  *availableEsxHostsList* 정보를 확인하세요. 
+
+
+| 5 | `/4.1/datastores/backups/
+{backupId}/mount` | `Mount datastores for a backup`지정된 데이터 저장소 백업을 마운트합니다.  2단계의 *backupId*를 전달합니다.  *datastore* 및 *location* 속성에서 다음 정보를 전달합니다. `snapshotLocationsList` 3단계에서.  *esxHostName* 속성에서 4단계의 *availableEsxHostsList*에서 정보를 전달합니다. 
+|===
+
+
+== 데이터 저장소를 마운트 해제하려면 다음 워크플로를 따르세요.
+
+|===
+| 단계 | REST API | 댓글 
+
+
+| 1 | `/4.1/datastores/backups/
+{backupId}/mounted` | `Get the list of mounted datastores` . 마운트 해제하려는 데이터 저장소 *moref*(s)를 기록해 두세요. 
+
+
+| 2 | `/4.1/datastores/unmount` | `UnMount datastores for a backup`지정된 데이터 저장소 백업을 마운트 해제합니다.  1단계의 데이터 저장소 *moref*(s)를 전달합니다. 
+|===

@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_search_for_backups.html 
+keywords:  
+summary: 복원 마법사를 사용하여 VM이나 데이터 저장소의 특정 백업을 검색하여 찾을 수 있습니다.  백업을 찾은 후에는 복원할 수 있습니다. 
+---
+= 백업 검색
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+복원 마법사를 사용하여 VM이나 데이터 저장소의 특정 백업을 검색하여 찾을 수 있습니다.  백업을 찾은 후에는 복원할 수 있습니다.
+
+.단계
+. VMware vSphere 클라이언트 GUI에서 도구 모음의 *메뉴*를 선택한 후 다음 중 하나를 수행합니다.
++
+|===
+| 백업을 보려면… | 다음을 수행하세요… 
+
+
+| VM | *호스트 및 클러스터* 메뉴 옵션을 선택한 다음, VM을 선택하고 *구성* 탭을 선택한 다음 * SnapCenter Plug-in for VMware vSphere * 섹션에서 *백업*을 선택합니다. 
+
+
+| 데이터 저장소 | *저장소* 메뉴 옵션을 선택한 다음, 데이터 저장소를 선택하고, *구성* 탭을 선택한 다음, * SnapCenter Plug-in for VMware vSphere* 섹션에서 *백업*을 선택합니다. 
+|===
+. 왼쪽 탐색기 창에서 VM이나 데이터 저장소가 포함된 데이터 센터를 확장합니다.
+. 선택 사항: VM이나 데이터 저장소를 마우스 오른쪽 버튼으로 클릭한 다음 드롭다운 목록에서 * SnapCenter Plug-in for VMware vSphere*을 선택한 다음, 보조 드롭다운 목록에서 *복원*을 선택합니다.
+. *복원* 마법사에서 검색 이름을 입력하고 *검색*을 선택합니다.
++
+필터 아이콘을 선택하고 날짜와 시간 범위를 선택한 다음, VMware 스냅샷이 포함된 백업을 원하는지 여부, 마운트된 백업을 원하는지 여부와 위치를 선택하여 백업 목록을 필터링할 수 있습니다. *확인*을 선택하세요.
+
+

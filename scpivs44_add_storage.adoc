@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_storage.html 
+keywords:  
+summary:  
+---
+= 저장공간 추가
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+이 섹션의 단계에 따라 저장소를 추가하세요.
+
+. SCV 플러그인의 왼쪽 탐색 창에서 *저장 시스템*을 선택한 다음 *추가* 옵션을 선택합니다.
+. 스토리지 시스템 추가 대화 상자에서 기본 SVM 또는 클러스터 정보를 입력하고 *추가*를 선택합니다.
+

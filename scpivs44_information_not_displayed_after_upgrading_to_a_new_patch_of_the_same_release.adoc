@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 동일한 릴리스의 새로운 패치로 업그레이드한 후, 최근 작업이나 기타 정보가 대시보드와 작업 모니터에 표시되지 않을 수 있습니다. 
+---
+= 동일한 릴리스의 새 패치로 업그레이드한 후 정보가 표시되지 않음
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 동일한 릴리스의 새로운 패치로 업그레이드한 후, 최근 작업이나 기타 정보가 대시보드와 작업 모니터에 표시되지 않을 수 있습니다.
+
+동일한 릴리스의 새로운 패치로 업그레이드하는 경우 업그레이드 또는 등록을 하기 전에 vCenter 웹 서버에서 SnapCenter Plug-in for VMware vSphere 지우고 서버를 다시 시작해야 합니다.
+
+플러그인 캐시가 지워지지 않으면 다음과 같은 시나리오에서 최근 작업이 대시보드와 작업 모니터에 표시되지 않습니다.
+
+* SnapCenter Plug-in for VMware vSphere vCenter를 사용하여 배포된 후 나중에 동일한 릴리스의 패치로 업그레이드되었습니다.
+* SnapCenter VMware 가상 어플라이언스는 vCenter 1에 배포되었습니다.  나중에 SnapCenter Plug-in for VMware vSphere 이 새로운 vCenter2에 등록되었습니다.  SnapCenter Plug-in for VMware vSphere 의 새 인스턴스가 패치를 통해 생성되어 vCenter1에 등록됩니다.  하지만 vCenter1에는 패치가 적용되지 않은 SnapCenter Plug-in for VMware vSphere 의 캐시된 플러그인이 여전히 있으므로 캐시를 지워야 합니다.
+
+
+캐시는 서버 운영 체제 유형에 따라 다음 위치에 있습니다.
+
+* vCenter Server Linux 어플라이언스
++
+`/etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity/`
+
+* 윈도우 OS
++
+`%PROGRAMFILES%/VMware/vSphere client/vc-packages/vsphere-client-serenity/`
+
+
+
+
+
+== 캐시를 지우기 전에 이미 업그레이드한 경우 해결 방법
+
+. SnapCenter Plug-in for VMware vSphere 에 로그인합니다.
++
+SnapCenter Plug-in for VMware vSphere 배포하면 IP 주소가 표시됩니다.
+
+. 왼쪽 탐색 창에서 *구성*을 선택한 다음, *플러그인 세부 정보* 섹션에서 서비스 옵션을 선택하여 플러그인을 비활성화합니다.
++
+SnapCenter Plug-in for VMware vSphere 서비스가 비활성화되었으며, vCenter에서 확장 프로그램이 등록 취소되었습니다.
+
+. 위치 `vsphere-client-serenity` 폴더를 찾은 다음 `com.netapp.scv.client-<release-number>` 폴더를 삭제하세요.
++
+폴더 이름은 릴리스마다 변경됩니다.
+
+. vCenter Server를 다시 시작합니다.
+. VMware vSphere 클라이언트에 로그인합니다.
+. 왼쪽 탐색 창에서 *구성*을 선택한 다음, *플러그인 세부 정보* 섹션에서 서비스 옵션을 선택하여 플러그인을 활성화합니다.
++
+SnapCenter Plug-in for VMware vSphere 활성화되어 있으며, 확장 기능이 vCenter에 등록되어 있습니다.
+
+

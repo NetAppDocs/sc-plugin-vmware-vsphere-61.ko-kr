@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__attach_and_detach_vmdks.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 사용하여 VMDK에 대한 연결 및 분리 작업을 수행하려면 규정된 REST API 호출 순서를 따라야 합니다. 
+---
+= VMDK를 연결하고 분리하기 위한 REST API 워크플로
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 사용하여 VMDK에 대한 연결 및 분리 작업을 수행하려면 규정된 REST API 호출 순서를 따라야 합니다.
+
+각 REST API에 대해 다음을 추가합니다. `\https://<server>:<port>` REST API의 전면에 위치하여 완전한 엔드포인트를 형성합니다.
+
+
+
+== VMDK를 연결하려면 다음 워크플로를 따르세요.
+
+|===
+| 단계 | REST API | 댓글 
+
+
+| 1 | 로 가다 `\http://<vCenter-IP>/mob` | 자세한 내용은 VMware Managed Objects URL에서 확인하세요.  VMDK를 연결하려는 VM에 대한 *moref*를 참고하세요. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups`지정된 VM에 대한 백업 목록을 가져옵니다.  1단계의 *moref*를 전달하세요.  복원하려는 백업의 *backupId*를 기록해 두세요. 
+
+
+| 3 | `/4.1/vm/{moref}/backups/
+{backupId}/vmdklocations` | `Get VMDK Locations`지정된 VM에 대한 VMDK 목록을 가져옵니다.  2단계의 *backupId*와 1단계의 *moref*를 전달합니다.  *vmdkLocationsList* 정보를 참고하세요. 
+
+
+| 4 | `/4.1/vm/{moref}/attachvmdks`  a| 
+`Attach VMDKs`지정된 VMDK를 원래 VM에 연결합니다.  2단계의 *backupId*와 1단계의 *moref*를 전달합니다.  3단계의 *vmdkLocationsList*를 *vmdkLocations* 속성으로 전달합니다.
+
+
+NOTE: VMDK를 다른 VM에 연결하려면 alternateVmMoref 특성에 대상 VM의 moref를 전달합니다.
+
+|===
+
+
+== VMDK를 분리하려면 다음 워크플로를 따르세요.
+
+|===
+| 단계 | REST API | 댓글 
+
+
+| 1 | 로 가다 `\http://<vCenter-IP>/mob` | 자세한 내용은 VMware Managed Objects URL에서 확인하세요.  VMDK를 분리하려는 VM에 대한 *moref*를 참고하세요. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups`지정된 VM에 대한 백업 목록을 가져옵니다.  1단계의 *moref*를 전달하세요.  복원하려는 백업의 *backupId*를 기록해 두세요. 
+
+
+| 3 | `/4.1/vm/{moref}/backups/
+{backupId}/vmdklocations` | `Get VMDK Locations`지정된 VM에 대한 VMDK 목록을 가져옵니다.  2단계의 *backupId*와 1단계의 *moref*를 전달합니다.  *vmdkLocationsList* 정보를 참고하세요. 
+
+
+| 4 | `/4.1/vm/{moref}/detachvmdks` | `Detach VMDKs`지정된 VMDK를 분리합니다.  1단계의 *moref*를 전달하세요.  3단계의 VMDK *vmdkLocationsList* 세부 정보를 *vmdksToDetach* 특성으로 전달합니다. 
+|===

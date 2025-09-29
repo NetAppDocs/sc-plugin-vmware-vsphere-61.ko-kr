@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis_overview.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 사용하면 일반적인 데이터 보호 작업을 수행할 수 있습니다.  이 플러그인에는 Windows SnapCenter Swagger 웹 페이지와 다른 Swagger 웹 페이지가 있습니다. 
+---
+= 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 사용하면 일반적인 데이터 보호 작업을 수행할 수 있습니다.  이 플러그인에는 Windows SnapCenter Swagger 웹 페이지와 다른 Swagger 웹 페이지가 있습니다.
+
+* VMware vSphere용 REST API를 사용하여 VM 및 데이터 저장소에서 다음 작업을 수행하는 REST API 워크플로가 문서화되어 있습니다.
++
+** 스토리지 VM 및 클러스터 추가, 수정 및 삭제
+** 리소스 그룹 생성, 수정 및 삭제
+** 예약 및 주문형 VM 백업
+** 기존 VM 및 삭제된 VM 복원
+** VMDK 복원
+** VMDK 연결 및 분리
+** 데이터스토어 마운트 및 마운트 해제
+** 작업을 다운로드하고 보고서를 생성합니다.
+** 내장된 일정 수정
+** ASA r2에 대한 보조 보호 구성
+
+
+* VMware vSphere용 REST API에서 지원되지 않는 작업
++
+** 게스트 파일 복원
+** SnapCenter Plug-in for VMware vSphere 설치 및 구성
+** 사용자에게 RBAC 역할 또는 액세스 권한 할당
+
+
+* `uri`매개변수
++
+그만큼 `uri` 매개변수는 항상 "null" 값을 반환합니다.
+
+* 로그인 시간 초과
++
+기본 제한 시간은 120분(2시간)입니다.  vCenter 설정에서 다른 시간 초과 값을 구성할 수 있습니다.
+
+* 토큰 관리
++
+보안을 위해 REST API는 각 요청과 함께 전달되는 필수 토큰을 사용하며, 클라이언트 검증을 위해 모든 API 호출에 사용됩니다.  VMware vSphere용 REST API는 VMware 인증 API를 사용하여 토큰을 얻습니다.  VMware는 토큰 관리를 제공합니다.
+
++
+토큰을 얻으려면 다음을 사용하세요. `/4.1/auth/login` REST API를 사용하고 vCenter 자격 증명을 제공합니다.
+
+* API 버전 지정
++
+각 REST API 이름에는 REST API가 처음 출시된 SnapCenter 버전 번호가 포함됩니다.  예를 들어, REST API `/4.1/datastores/{moref}/backups` SnapCenter 4.1에서 처음 출시되었습니다.
+
++
+향후 릴리스의 REST API는 일반적으로 이전 버전과 호환되며 필요에 따라 새로운 기능을 수용하도록 수정될 것입니다.
+
+

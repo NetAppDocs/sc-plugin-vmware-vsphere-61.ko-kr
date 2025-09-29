@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_enable_ssh.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 배포하면 SSH는 기본적으로 비활성화됩니다. 
+---
+= SnapCenter Plug-in for VMware vSphere 에 SSH 활성화
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 배포하면 SSH는 기본적으로 비활성화됩니다.
+
+.단계
+. VMware vSphere 클라이언트에서 SnapCenter Plug-in for VMware vSphere 있는 VM을 선택합니다.
+. 가상 어플라이언스의 *요약* 탭에서 *원격 콘솔 시작*을 선택하여 유지 관리 콘솔 창을 열고 로그온합니다.
++
+유지 관리 콘솔에 액세스하고 로그인하는 방법에 대한 정보는 다음을 참조하세요.link:scpivs44_access_the_maintenance_console.html["유지 관리 콘솔에 액세스"^] .
+
++
+image:scpivs44_image11.png["유지 관리 콘솔 창"]
+
+. 메인 메뉴에서 메뉴 옵션 *2) 시스템 구성*을 선택합니다.
+. 시스템 구성 메뉴에서 *6) SSH 액세스 활성화* 메뉴 옵션을 선택한 다음 확인 프롬프트에서 “*y*”를 입력합니다.
+. "SSH 액세스 활성화..." 메시지가 나타날 때까지 기다린 다음, *Enter*를 눌러 계속 진행하고, 프롬프트에서 *X*를 입력하여 유지 관리 모드를 종료합니다.
+

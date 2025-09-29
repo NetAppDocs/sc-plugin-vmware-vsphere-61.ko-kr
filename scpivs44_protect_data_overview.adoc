@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_protect_data_overview.html 
+keywords:  
+summary: 모든 백업 작업은 리소스 그룹에서 수행되며, 리소스 그룹에는 하나 이상의 VM과 데이터 저장소의 조합이 포함될 수 있습니다. 필요에 따라 또는 정의된 보호 일정에 따라 백업할 수 있습니다. 
+---
+= 데이터 보호 워크플로
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter vSphere 클라이언트를 사용하여 VM, VMDK 및 데이터 저장소에 대한 데이터 보호 작업을 수행합니다.  모든 백업 작업은 리소스 그룹에서 수행되며, 리소스 그룹에는 하나 이상의 VM과 데이터 저장소의 조합이 포함될 수 있습니다. 필요에 따라 또는 정의된 보호 일정에 따라 백업할 수 있습니다.
+
+데이터스토어를 백업하면 해당 데이터스토어에 있는 모든 VM이 백업됩니다.
+
+동일한 리소스 그룹에서 백업 및 복원 작업을 동시에 수행할 수 없습니다.
+
+SnapCenter Plug-in for VMware vSphere 지원하는 것과 지원하지 않는 것에 대한 정보를 검토해야 합니다.link:scpivs44_deployment_planning_and_requirements.html["배포 계획 및 요구 사항"]
+
+MetroCluster 구성에서:
+
+* SnapCenter Plug-in for VMware vSphere 장애 조치 후 보호 관계를 감지하지 못할 수 있습니다. 참조하다 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["KB 문서: MetroCluster 장애 조치 후 SnapMirror 또는 SnapVault 관계를 감지할 수 없음"^] 자세한 내용은.
+* 백업이 오류로 실패하는 경우 `Unable to discover resources on SCV: <xxx>…` 전환/백 전환 후 NFS 및 VMFS VM의 경우 유지 관리 콘솔에서 SnapCenter VMware 서비스를 다시 시작합니다.
+
+
+다음 워크플로 그림은 백업 작업을 수행해야 하는 순서를 보여줍니다.
+
+image:scpivs44_image13.png["백업 작업 워크플로"]

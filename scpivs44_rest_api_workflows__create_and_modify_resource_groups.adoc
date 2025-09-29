@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__create_and_modify_resource_groups.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 사용하여 리소스 그룹 생성 및 수정 작업을 수행하려면 규정된 REST API 호출 순서를 따라야 합니다. 
+---
+= 리소스 그룹을 생성하고 수정하기 위한 REST API 워크플로
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 사용하여 리소스 그룹 생성 및 수정 작업을 수행하려면 규정된 REST API 호출 순서를 따라야 합니다.
+
+각 REST API에 대해 다음을 추가합니다. `\https://<server>:<port>` REST API의 전면에 위치하여 완전한 엔드포인트를 형성합니다.
+
+리소스 그룹을 만들려면 다음 워크플로를 따르세요.
+
+|===
+| 단계 | REST API | 댓글 
+
+
+| 1 | `/4.1/policies` | `Get Policies`VMware vSphere 클라이언트 정책 목록을 가져옵니다.  리소스 그룹을 생성할 때 사용하려는 *policyId*와 정책 *frequency*를 기록해 두세요.  정책이 나열되어 있지 않으면 다음을 사용하십시오. `Create Policy` 새로운 정책을 생성하기 위한 REST API입니다. 
+
+
+| 2 | `/4.1/resource-groups` | `Create a Resource Group`지정된 정책으로 리소스 그룹을 생성합니다.  1단계의 *policyId*를 전달하고 다른 모든 필수 속성 외에도 정책 *빈도* 세부 정보를 입력합니다.  이 REST API를 사용하여 2차 보호를 활성화할 수 있습니다. 
+|===
+리소스 그룹을 수정하려면 다음 워크플로를 따르세요.
+
+|===
+| 단계 | REST API | 댓글 
+
+
+| 1 | `/4.1/resource-groups` | `Get List of Resource Groups`VMware vSphere 클라이언트 리소스 그룹 목록을 가져옵니다.  수정하려는 *resourceGroupId*를 기록해 두세요. 
+
+
+| 2 | `/4.1/policies` | 할당된 정책을 수정하려면 `Get Policies` VMware vSphere 클라이언트 정책 목록을 가져옵니다.  리소스 그룹을 수정할 때 사용하려는 *policyId*와 정책 *frequency*를 기록해 두세요. 
+
+
+| 3 | `/4.1/resource-groups/
+{resouceGroupId}` | `Update a Resource Group`지정된 리소스 그룹을 수정합니다.  1단계의 *resourceGroupId*를 전달합니다.  선택적으로 2단계의 *policyId*를 전달하고 다른 모든 필수 속성 외에도 *frequency* 세부 정보를 입력합니다. 
+|===

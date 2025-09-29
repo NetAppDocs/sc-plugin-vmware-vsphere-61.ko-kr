@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_get_started_overview.html 
+keywords:  
+summary: 가상화된 머신에서 VM, 데이터 저장소 및 애플리케이션 일관성 데이터베이스를 보호하기 위해 SnapCenter 기능을 사용하려면 SnapCenter Plug-in for VMware vSphere 배포해야 합니다. 
+---
+= 배포 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+가상화된 머신에서 VM, 데이터 저장소 및 애플리케이션 일관성 데이터베이스를 보호하기 위해 SnapCenter 기능을 사용하려면 SnapCenter Plug-in for VMware vSphere 배포해야 합니다.
+
+기존 SnapCenter 사용자는 새로운 SnapCenter 사용자와 다른 배포 워크플로를 사용해야 합니다.

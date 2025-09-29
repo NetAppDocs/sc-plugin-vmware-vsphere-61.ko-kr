@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 에서 지원 번들을 생성할 수 있습니다. 
+---
+= SnapCenter Plug-in for VMware vSphere 에서 지원 번들 생성
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+.시작하기 전에
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 에 로그인하려면 IP 주소와 로그인 자격 증명을 알아야 합니다. 유지 관리 콘솔에서 생성된 MFA 토큰도 기록해 두어야 합니다.
+
+* SnapCenter Plug-in for VMware vSphere 배포되면 IP 주소가 표시되었습니다.
+* SnapCenter Plug-in for VMware vSphere 배포하는 동안 제공된 로그인 자격 증명을 사용하거나 나중에 수정된 로그인 자격 증명을 사용하세요.
+* 유지 관리 콘솔 시스템 구성 옵션을 사용하여 6자리 MFA 토큰을 생성합니다.
+
+
+.단계
+. SnapCenter Plug-in for VMware vSphere 에 로그인합니다.
++
+형식을 사용하세요 `\https://<OVA-IP-address>:8080` .
+
+. 상단 도구 모음에서 설정 아이콘을 선택하세요.
++
+image:scpivs44_image10.png["VMware vSphere 인터페이스용 SnapCenter 플러그인"]
+
+. *설정* 페이지의 *지원* 섹션에서 *지원* 번들 생성*을 선택합니다.
+. 지원 번들이 생성된 후 제공된 링크를 선택하여 NetApp 에 ​​번들을 다운로드하세요.
+

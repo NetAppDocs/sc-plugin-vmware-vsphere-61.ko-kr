@@ -1,0 +1,265 @@
+---
+settings:
+  name: SnapCenter Plug-in for VMware vSphere
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  downlevel: true
+  versions:
+  - version-number: '6.1'
+    url: "/sc-plugin-vmware-vsphere-61"
+  - version-number: '6.2'
+    url: "/sc-plugin-vmware-vsphere"
+  - version-number: '6.0'
+    url: "/sc-plugin-vmware-vsphere-60"
+  - version-number: '5.0'
+    url: "/sc-plugin-vmware-vsphere-50"
+  - version-number: '4.9'
+    url: "/sc-plugin-vmware-vsphere-49"
+  - version-number: '4.8'
+    url: "/sc-plugin-vmware-vsphere-48"
+  - version-number: '4.7'
+    url: "/sc-plugin-vmware-vsphere-47"
+  - version-number: '4.6'
+    url: "/sc-plugin-vmware-vsphere-46"
+  - version-number: '4.5'
+    url: "/sc-plugin-vmware-vsphere-45"
+  langs: ko-kr,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,zh-cn,zh-tw
+sidebar:
+  entries:
+  - title: SnapCenter Plug-in for VMware vSphere
+    url: "/index.html"
+  - title: 릴리스 노트
+    entries:
+    - title: SnapCenter Plug-in for VMware vSphere 릴리스 노트
+      url: "/scpivs44_release_notes.html"
+    - title: SnapCenter Plug-in for VMware vSphere 의 새로운 기능
+      url: "/scv_releasenotes_whats_new.html"
+    - title: 업그레이드 경로
+      url: "/scv_rn_upgrade_paths.html"
+  - title: 개념
+    entries:
+    - title: 제품 개요
+      url: "/scpivs44_concepts_overview.html"
+    - title: 다양한 SnapCenter GUI 개요
+      url: "/scpivs44_overview_of_different_snapcenter_guis.html"
+    - title: 라이센스
+      url: "/scpivs44_licensing.html"
+    - title: 역할 기반 액세스 제어(RBAC)
+      url: "/scpivs44_role_based_access_control.html"
+    - title: SnapCenter Plug-in for VMware vSphere 의 RBAC 유형
+      url: "/scpivs44_types_of_rbac_for_snapcenter_users.html"
+    - title: SnapCenter Plug-in for VMware vSphere 의 ONTAP RBAC 기능
+      url: "/scpivs44_ontap_rbac_features_in_snapcenter.html"
+    - title: SnapCenter Plug-in for VMware vSphere 과 함께 제공되는 미리 정의된 역할
+      url: "/scpivs44_predefined_roles_packaged_with_snapcenter.html"
+    - title: SnapCenter Plug-in for VMware vSphere 에 ONTAP RBAC를 구성하는 방법
+      url: "/scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmware_vsphere.html"
+  - title: 시작하기
+    entries:
+    - title: 배포 개요
+      url: "/scpivs44_get_started_overview.html"
+    - title: 신규 사용자를 위한 배포 워크플로
+      url: scpivs44_deployment_workflow_for_new_users.html
+    - title: 기존 사용자를 위한 배포 워크플로
+      url: "/scpivs44_deployment_workflow_for_existing_users.html"
+    - title: SCV 배포 요구 사항
+      entries:
+      - title: 배포 계획 및 요구 사항
+        url: "/scpivs44_deployment_planning_and_requirements.html"
+      - title: ONTAP 권한이 필요합니다
+        url: "/scpivs44_minimum_ontap_privileges_required.html"
+      - title: 최소 vCenter 권한이 필요합니다.
+        url: "/scpivs44_minimum_vcenter_privileges_required.html"
+    - title: Open Virtual Appliance(OVA) 다운로드
+      url: "/scpivs44_download_the_ova_open_virtual_appliance.html"
+    - title: SnapCenter Plug-in for VMware vSphere 배포
+      url: "/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html"
+    - title: 배치 후 필요한 작업 및 문제
+      url: "/scpivs44_post_deployment_required_operations_and_issues.html"
+    - title: SnapCenter VMware vSphere 클라이언트에 로그인합니다.
+      url: "/scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html"
+  - title: 빠른 시작
+    entries:
+    - title: 개요
+      url: "/scpivs44_quick_start_overview.html"
+    - title: SnapCenter Plug-in for VMware vSphere 배포
+      url: "/scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere_01.html"
+    - title: 저장공간 추가
+      url: "/scpivs44_add_storage.html"
+    - title: 백업 정책 생성
+      url: "/scpivs44_create_backup_policies.html"
+    - title: 리소스 그룹 생성
+      url: "/scpivs44_create_resource_groups.html"
+  - title: 모니터링 및 보고
+    entries:
+    - title: 상태 정보 보기
+      url: "/scpivs44_view_status_information.html"
+    - title: 작업 모니터링
+      url: "/scpivs44_monitor_jobs.html"
+    - title: 작업 로그 다운로드
+      url: "/scpivs44_download_job_logs.html"
+    - title: 액세스 보고서
+      url: "/scpivs44_access_reports.html"
+    - title: SnapCenter Plug-in for VMware vSphere 에서 지원 번들 생성
+      url: "/scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html"
+    - title: 유지 관리 콘솔에서 지원 번들 생성
+      url: "/scpivs44_generate_a_support_bundle_from_the_maintenance_console.html"
+    - title: 감사 로그
+      url: "/scv48_audit_logs.html"
+  - title: 저장소 관리
+    entries:
+    - title: 저장공간 추가
+      url: "/scpivs44_add_storage_01.html"
+    - title: 스토리지 VM 관리 - 수정, 이름 바꾸기, 제거
+      url: "/scpivs44_manage_storage_systems.html"
+    - title: 구성된 저장 시간 초과 수정
+      url: "/scpivs44_modify_storage_timeout.html"
+  - title: 데이터 보호
+    entries:
+    - title: 데이터 보호 워크플로
+      url: "/scpivs44_protect_data_overview.html"
+    - title: 백업 보기
+      url: "/scpivs44_view_vm_and_datastore_backups.html"
+    - title: 백업 정책 생성
+      url: "/scpivs44_create_backup_policies_for_vms_and_datastores.html"
+    - title: 리소스 그룹 생성
+      url: "/scpivs44_create_resource_groups_for_vms_and_datastores.html"
+    - title: 서문과 서론
+      url: "/scpivs44_prescripts_and_postscripts.html"
+    - title: 리소스 그룹에 단일 VM 또는 데이터 저장소 추가
+      url: "/scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html"
+    - title: 리소스 그룹에 여러 VM 및 데이터 저장소 추가
+      url: "/scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html"
+    - title: 저장소 이름 바꾸기
+      url: "/rename_storage.html"
+    - title: 필요에 따라 리소스 그룹 백업
+      url: "/scpivs44_back_up_resource_groups_on_demand.html"
+    - title: MySQL 데이터베이스 백업
+      url: "/scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html"
+    - title: 리소스 그룹 관리 - 일시 중단, 재개, 수정, 삭제
+      url: "/scpivs44_manage_resource_groups.html"
+    - title: 정책 관리 - 분리, 수정, 삭제
+      url: "/scpivs44_manage_policies.html"
+    - title: 백업 관리 - 이름 바꾸기, 삭제
+      url: "/scpivs44_manage_backups.html"
+  - title: 데이터스토어 마운트 및 마운트 해제
+    entries:
+    - title: 백업 마운트
+      url: "/scpivs44_mount_a_backup.html"
+    - title: 백업 마운트 해제
+      url: "/scpivs44_unmount_a_backup.html"
+  - title: 백업 복원
+    entries:
+    - title: 개요
+      url: "/scpivs44_restore_from_backups_overview.html"
+    - title: 복원 작업이 수행되는 방식
+      url: "/scpivs44_how_restore_operations_are_performed.html"
+    - title: 백업 검색
+      url: "/scpivs44_search_for_backups.html"
+    - title: 백업에서 VM 복원
+      url: "/scpivs44_restore_vms_from_backups.html"
+    - title: 백업에서 삭제된 VM 복원
+      url: "/scpivs44_restore_deleted_vms_from_backups.html"
+    - title: 백업에서 VMDK 복원
+      url: "/scpivs44_restore_vmdks_from_backups.html"
+    - title: MySQL 데이터베이스의 최신 백업을 복원합니다.
+      url: "/scpivs44_restore_the_most_recent_backup_of_the_mysql_database.html"
+    - title: MySQL 데이터베이스의 특정 백업을 복원합니다.
+      url: "/scpivs44_restore_a_specific_backup_of_the_mysql_database.html"
+  - title: VMDK 연결 및 분리
+    entries:
+    - title: VMDK를 VM 또는 vVol VM에 연결
+      url: "/scpivs44_attach_vmdks_to_a_vm.html"
+    - title: 가상 디스크 분리
+      url: "/scpivs44_detach_a_virtual_disk.html"
+  - title: 게스트 파일 및 폴더 복원
+    entries:
+    - title: 워크플로, 전제 조건 및 제한 사항
+      url: "/scpivs44_restore_guest_files_and_folders_overview.html"
+    - title: VMDK에서 게스트 파일 및 폴더 복원
+      url: "/scpivs44_restore_guest_files_and_folders_from_vmdks.html"
+    - title: 복원 작업을 위한 프록시 VM 설정
+      url: "/scpivs44_set_up_proxy_vms_for_restore_operations.html"
+    - title: VM 게스트 파일 복원을 위한 자격 증명 구성
+      url: "/scpivs44_configure_credentials_for_vm_guest_file_restores.html"
+    - title: 게스트 파일 복구 세션 시간 연장
+      url: "/scpivs44_extend_the_time_of_a_guest_file_restore_session.html"
+    - title: 게스트 파일 복원 시나리오 발생 가능성
+      url: "/scpivs44_guest_file_restore_scenarios_you_might_encounter.html"
+  - title: SnapCenter Plug-in for VMware vSphere 관리
+    entries:
+    - title: VMware vSphere 클라이언트 서비스를 다시 시작합니다.
+      url: "/scpivs44_restart_the_vmware_vsphere_web_client_service.html"
+    - title: 유지 관리 콘솔에 액세스하세요
+      url: "/scpivs44_access_the_maintenance_console.html"
+    - title: 유지 관리 콘솔에서 SnapCenter Plug-in for VMware vSphere 암호 수정
+      url: "/scpivs44_modify_plugin_password.html"
+    - title: 인증서 생성 및 가져오기
+      url: "/scpivs44_create_and_import_certificates.html"
+    - title: vCenter에서 SnapCenter Plug-in for VMware vSphere 취소
+      url: "/scpivs44_unregister_plugin_from_vcenter.html"
+    - title: SnapCenter Plug-in for VMware vSphere 비활성화 및 활성화
+      url: "/scpivs44_disable_and_enable_plugin.html"
+    - title: SnapCenter Plug-in for VMware vSphere 제거
+      url: "/scpivs44_remove_plugin.html"
+  - title: 구성 관리
+    entries:
+    - title: 시간대 수정
+      url: "/scpivs44_modify_the_time_zones.html"
+    - title: 로그온 자격 증명 수정
+      url: "/scpivs44_modify_the_logon_credentials.html"
+    - title: vCenter 로그온 자격 증명 수정
+      url: "/scpivs44_modify_the_vcenter_logon_credentials.html"
+    - title: 네트워크 설정 수정
+      url: "/scpivs44_modify_the_network_settings.html"
+    - title: 구성 기본값 수정
+      url: "/scpivs44_modify_configuration_default_values.html"
+    - title: scbr.override 파일을 만듭니다.
+      url: "/scpivs44_create_the_scbr_override_file.html"
+    - title: 재정의할 수 있는 구성 속성
+      url: "/scpivs44_properties_you_can_override.html"
+    - title: SSH 활성화
+      url: "/scpivs44_enable_ssh.html"
+  - title: REST API
+    entries:
+    - title: 개요
+      url: "/scpivs44_rest_apis_overview.html"
+    - title: Swagger API 웹 페이지를 사용하여 REST API에 액세스
+      url: "/scpivs44_access_rest_apis_using_the_swagger_api_web_page.html"
+    - title: 스토리지 VM을 추가하고 수정하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflows__add_and_modify_storage_vms.html"
+    - title: 리소스 그룹을 생성하고 수정하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflows__create_and_modify_resource_groups.html"
+    - title: 주문형 백업을 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflow__back_up_on_demand.html"
+    - title: VM을 복원하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflow__restore_vms.html"
+    - title: 삭제된 VM을 복원하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflow__restore_deleted_vms.html"
+    - title: VMDK를 복원하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflow__restore_vmdks.html"
+    - title: VMDK를 연결하고 분리하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflows__attach_and_detach_vmdks.html"
+    - title: 데이터 저장소를 마운트 및 마운트 해제하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflows__mount_and_unmount_datastores.html"
+    - title: 작업을 다운로드하고 보고서를 생성하는 REST API
+      url: "/scpivs44_rest_apis__download_jobs_and_generate_reports.html"
+    - title: 내장된 일정을 수정하기 위한 REST API 워크플로
+      url: "/scpivs44_rest_api_workflows__modify_built-in_schedules.html"
+    - title: 중단된 작업을 실패로 표시하는 REST API
+      url: "/scpivs44_rest_apis_fail_stuck_jobs.html"
+    - title: 감사 로그를 생성하는 REST API
+      url: "/scpivs48_rest_apis_audit_logs.html"
+  - title: 치받이
+    entries:
+    - title: SnapCenter Plug-in for VMware vSphere 의 이전 릴리스에서 업그레이드
+      url: "/scpivs44_upgrade.html"
+    - title: 동일한 릴리스의 새 패치로 업그레이드
+      url: "/scpivs44_upgrade_to_a_new_patch.html"
+    - title: 동일한 릴리스의 새 패치로 업그레이드한 후 정보가 표시되지 않음
+      url: "/scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html"
+  - title: 법적 고지 사항
+    url: "/legal-notices.html"

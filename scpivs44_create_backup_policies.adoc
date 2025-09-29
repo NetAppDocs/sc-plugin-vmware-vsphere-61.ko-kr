@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_create_backup_policies.html 
+keywords:  
+summary:  
+---
+= 백업 정책 생성
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+백업 정책을 생성하려면 아래 지침을 따르세요.
+
+. SCV 플러그인의 왼쪽 탐색 창에서 *정책*을 선택한 다음 *새 정책*을 선택합니다.
+. *새 백업 정책* 페이지에서 정책 구성 정보를 입력한 다음 *추가*를 선택합니다.
+

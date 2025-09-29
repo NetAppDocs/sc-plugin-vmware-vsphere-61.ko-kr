@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restart_the_vmware_vsphere_web_client_service.html 
+keywords:  
+summary: SnapCenter VMware vSphere 클라이언트가 제대로 작동하지 않으면 브라우저 캐시를 지워야 할 수도 있습니다.  문제가 지속되면 웹 클라이언트 서비스를 다시 시작하세요. 
+---
+= VMware vSphere 클라이언트 서비스를 다시 시작합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter VMware vSphere 클라이언트가 제대로 작동하지 않으면 브라우저 캐시를 지워야 할 수도 있습니다.  문제가 지속되면 웹 클라이언트 서비스를 다시 시작하세요.
+
+
+
+== Linux vCenter에서 VMware vSphere 클라이언트 서비스를 다시 시작합니다.
+
+.시작하기 전에
+vCenter 7.0U1 이상을 실행해야 합니다.
+
+.단계
+. SSH를 사용하여 루트로 vCenter Server Appliance에 로그인합니다.
+. 다음 명령을 사용하여 Appliance Shell 또는 BASH Shell에 액세스합니다.
++
+`shell`
+
+. 다음 HTML5 명령을 사용하여 웹 클라이언트 서비스를 중지합니다.
++
+`service-control --stop vsphere-ui`
+
+. 다음 셸 명령을 사용하여 vCenter에서 모든 오래된 HTML5 scvm 패키지를 삭제합니다.
++
+`etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity/`
+
++
+`rm -rf com.netapp.scv.client-<version_number>`
+
++
+
+IMPORTANT: VASA 또는 vCenter 7.x 이상 패키지를 제거하지 마세요.
+
+. 다음 HTML5 명령을 사용하여 웹 클라이언트 서비스를 시작합니다.
++
+`service-control --start vsphere-ui`
+
+

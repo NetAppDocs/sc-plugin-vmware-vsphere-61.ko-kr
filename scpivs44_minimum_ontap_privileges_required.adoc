@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_ontap_privileges_required.html 
+keywords:  
+summary: 데이터 보호를 위해 사용하는 SnapCenter 플러그인에 따라 필요한 최소 ONTAP 권한은 다릅니다. 
+---
+= ONTAP 권한이 필요합니다
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+데이터 보호를 위해 사용하는 SnapCenter 플러그인에 따라 필요한 최소 ONTAP 권한은 다릅니다.
+
+
+NOTE: VMware용 SnapCenter 플러그인(SCV) 5.0부터 SCV에 대한 사용자 정의 역할 기반 액세스 권한이 있는 모든 ONTAP 사용자의 로그인 방법으로 HTTP 및 ONTAPI 유형의 애플리케이션을 추가해야 합니다.  이러한 애플리케이션에 액세스할 수 없으면 백업이 실패합니다.  ONTAP 사용자 로그인 방법의 변경 사항을 인식하려면 SCV 서비스를 다시 시작해야 합니다.
+
+
+
+== 최소 ONTAP 권한이 필요합니다.
+
+모든 SnapCenter 플러그인에는 다음과 같은 최소 권한이 필요합니다.
+
+|===
+
+
+| 모든 액세스 명령: 최소 ONTAP 권한. 
+
+
+| 이벤트 생성-자동 지원-로그 
+
+
+| 작업 내역 보기 작업 보기 작업 중지 
+
+
+| lun lun lun 생성 lun 삭제 igroup lun 추가 igroup lun 생성 igroup lun 삭제 igroup lun igroup 이름 변경 lun igroup lun 매핑 표시 add-reporting-nodes lun 매핑 lun 매핑 생성 lun 매핑 삭제 lun 매핑 제거 remove-reporting-nodes lun 매핑 표시 lun 수정 lun 볼륨 이동 lun 오프라인 lun 온라인 lun 영구 예약 lun 지우기 lun 크기 조정 직렬 lun 표시 
+
+
+| snapmirror 목록-대상 snapmirror 정책 추가-규칙 snapmirror 정책 수정-규칙 snapmirror 정책 제거-규칙 snapmirror 정책 표시 snapmirror 복원 snapmirror 표시 snapmirror 기록 표시 snapmirror 업데이트 snapmirror 업데이트-ls-set 
+
+
+| 버전 
+
+
+| 볼륨 복제 볼륨 복제 생성 볼륨 복제 표시 볼륨 복제 분할 시작 볼륨 복제 분할 상태 볼륨 복제 분할 중지 볼륨 생성 볼륨 삭제 볼륨 삭제 볼륨 파일 복제 볼륨 생성 파일 show-disk-usage 볼륨 오프라인 볼륨 온라인 볼륨 관리 기능 볼륨 볼륨 수정 qtree 볼륨 qtree 볼륨 삭제 qtree 볼륨 수정 볼륨 qtree 볼륨 표시 제한 볼륨 표시 볼륨 스냅샷 생성 볼륨 스냅샷 삭제 볼륨 스냅샷 수정 볼륨 스냅샷 수정 modify-snaplock-expiry-time 볼륨 스냅샷 볼륨 이름 변경 스냅샷 볼륨 스냅샷 복원 restore-file 볼륨 스냅샷 볼륨 스냅샷 표시 볼륨 스냅샷 show-delta 볼륨 마운트 해제 
+
+
+| vserver cifs vserver cifs 공유 생성 vserver cifs 공유 삭제 vserver cifs shadowcopy 표시 vserver cifs 공유 표시 vserver cifs 표시 vserver export-policy vserver export-policy 생성 vserver export-policy 삭제 vserver export-policy 규칙 생성 vserver export-policy 규칙 표시 vserver export-policy 표시 vserver iscsi vserver iscsi 연결 표시 vserver nvme 하위 시스템 컨트롤러 vserver nvme 하위 시스템 컨트롤러 표시 vserver nvme 하위 시스템 생성 vserver nvme 하위 시스템 삭제 vserver nvme 하위 시스템 호스트 vserver nvme 하위 시스템 호스트 표시 vserver nvme 하위 시스템 호스트 추가 vserver nvme 하위 시스템 호스트 제거 vserver nvme 하위 시스템 맵 vserver nvme 하위 시스템 맵 표시 vserver nvme 하위 시스템 맵 추가 vserver nvme 하위 시스템 제거 vserver nvme 하위 시스템 수정 vserver nvme 하위 시스템 표시 vserver nvme 네임스페이스 생성 vserver nvme 네임스페이스 삭제 vserver nvme 네임스페이스 수정 vserver nvme 네임스페이스 네트워크 인터페이스 네트워크 인터페이스 장애 조치 그룹 표시 
+|===
+|===
+| 읽기 전용 명령: 최소 ONTAP Privileges 
+
+
+| 클러스터 ID 네트워크 인터페이스 표시 vserver vserver 피어 vserver 표시 
+|===
+|===
+| 모든 액세스 명령: 최소 ONTAP 권한 
+
+
+| 일관성 그룹 스토리지 유닛 표시 
+|===
+데이터 vServer와 연결할 역할을 생성할 때 _cluster identity show_ cluster level 명령을 무시할 수 있습니다.
+
+
+NOTE: 지원되지 않는 vServer 명령에 대한 경고 메시지는 무시할 수 있습니다.
+
+
+
+== 추가 ONTAP 정보
+
+* SnapMirror Active Sync 기능을 사용하려면 ONTAP 9.12.1 이상 버전이 필요합니다.
+* TamperProof Snapshot(TPS) 기능을 사용하려면:
++
+** SAN에는 ONTAP 9.13.1 이상 버전이 필요합니다.
+** NFS를 사용하려면 ONTAP 9.12.1 이상 버전이 필요합니다.
+
+
+* TCP를 통한 NVMe 및 FC를 통한 NVMe 프로토콜의 경우 ONTAP 9.10.1 이상이 필요합니다.
+
+
+
+NOTE: ONTAP 버전 9.11.1부터 ONTAP 클러스터와의 통신은 REST API를 통해 이루어집니다. ONTAP 사용자는 http 애플리케이션을 활성화해야 합니다. 하지만 ONTAP REST API에 문제가 발견되면 구성 키 'FORCE_ZAPI'가 기존 ZAPI 워크플로로 전환하는 데 도움이 됩니다. config APIS를 사용하여 이 키를 추가하거나 업데이트하고 true로 설정해야 할 수도 있습니다. KB 문서를 참조하세요. https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["SCV에서 RestAPI를 사용하여 구성 매개변수를 편집하는 방법"] 자세한 내용은.

@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_how_restore_operations_are_performed.html 
+keywords:  
+summary: 'VMFS 환경의 경우 SnapCenter Plug-in for VMware vSphere Storage VMotion을 사용하여 복제 및 마운트 작업을 통해 복원 작업을 수행합니다.  NFS 환경의 경우 플러그인은 기본 ONTAP 단일 파일 SnapRestore (SFSR)을 사용하여 대부분의 복원 작업에 더 큰 효율성을 제공합니다.  vVol VM의 경우 플러그인은 복원 작업에 ONTAP 단일 파일 스냅샷 복원 및 SnapMirror 복원을 사용합니다.' 
+---
+= 복원 작업이 수행되는 방식
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+VMFS 환경의 경우 SnapCenter Plug-in for VMware vSphere Storage VMotion을 사용하여 복제 및 마운트 작업을 통해 복원 작업을 수행합니다.  NFS 환경의 경우 플러그인은 기본 ONTAP 단일 파일 SnapRestore (SFSR)을 사용하여 대부분의 복원 작업에 더 큰 효율성을 제공합니다.  vVol VM의 경우 플러그인은 복원 작업에 ONTAP 단일 파일 스냅샷 복원(ONTAP SFSR) 및 SnapMirror 복원을 사용합니다.  다음 표는 복원 작업이 수행되는 방식을 나열합니다.
+
+|===
+| 복구 작업 | 에서 | 사용하여 수행됨 
+
+
+| VM 및 VMDK | 기본 백업 | NFS 환경: ONTAP 단일 파일 SnapRestore VMFS 환경: Storage VMotion을 사용하여 복제 및 마운트 
+
+
+| VM 및 VMDK | 2차 백업 | NFS 환경: ONTAP 단일 파일 SnapRestore VMFS 환경: Storage VMotion을 사용하여 복제 및 마운트 
+
+
+| 삭제된 VM 및 VMDK | 기본 백업 | NFS 환경: ONTAP 단일 파일 SnapRestore VMFS 환경: Storage VMotion을 사용하여 복제 및 마운트 
+
+
+| 삭제된 VM 및 VMDK | 2차 백업 | NFS 환경: Storage VMotion을 사용하여 복제 및 마운트 VMFS 환경: Storage VMotion을 사용하여 복제 및 마운트 
+
+
+| VM 및 VMDK | VM 일관성 기본 백업 | NFS 환경: ONTAP 단일 파일 SnapRestore VMFS 환경: Storage VMotion을 사용하여 복제 및 마운트 
+
+
+| VM 및 VMDK | VM 일관성 보조 백업 | NFS 환경: ONTAP SnapMirror Restore VMFS 환경: Storage VMotion을 사용하여 복제 및 마운트 
+
+
+| vVol VM | 충돌 시에도 일관된 기본 백업 | 모든 프로토콜에 대한 ONTAP 단일 파일 SnapRestore 
+
+
+| vVol VM | 충돌에 대한 일관성을 보장하는 보조 백업 | 모든 프로토콜에 대한 ONTAP SnapMirror 복원 
+
+
+| FlexGroup VM | 기본 백업  a| 
+NFS 환경: * ONTAP 버전 9.10.1 이상을 사용하는 경우 ONTAP 단일 파일 SnapRestore * 이전 버전의 ONTAP 에서 Storage VMotion을 사용하여 복제 및 마운트
+
+VMFS 환경: FlexGroups에 지원되지 않음
+
+
+
+| FlexGroup VM | 2차 백업  a| 
+NFS 환경:
+
+* ONTAP 버전 9.10.1 이상을 사용하는 경우 ONTAP SnapMirror 복원
+* ONTAP 이전 버전용 Storage VMotion을 사용하여 복제 및 마운트
+
+
+VMFS 환경: FlexGroups에 지원되지 않음
+
+|===
+
+NOTE: vVol 컨테이너 재조정 후에는 vVol VM을 복원할 수 없습니다.
+
+게스트 파일 복원 작업은 NFS 및 VMFS 환경 모두에서 복제 및 마운트 작업(Storage VMotion 아님)을 사용하여 수행됩니다.
+
+
+IMPORTANT: 복원 작업 중에 다음 오류가 발생할 수 있습니다. `Host unresolved volumes is null` 또는 `Exception while calling pre-restore on SCV….Error mounting cloned LUN as datastore…` 이는 SnapCenter Plug-in for VMware vSphere 복제본을 다시 서명하려고 할 때 발생합니다.  VMware 제한으로 인해 SnapCenter Plug-in for VMware vSphere 고급 ESXi 호스트 구성에서 자동 재서명 값을 제어할 수 없습니다.  TCP를 통한 NVMe 및 FC를 통한 NVMe 스토리지의 경우, SCV는 새로운 하위 시스템이 추가될 때 컨트롤러를 동적으로 추가할 수 없습니다.  마운트 작업을 시작하기 전에 필요한 매핑을 해야 합니다.
+
+참조하다 https://kb.netapp.com/mgmt/SnapCenter/SCV_clone_or_restores_fail_with_error_'Host_Unresolved_volumes_is_null'#["KB 문서: SCV 복제 또는 복원이 '호스트 미확인 볼륨이 null입니다' 오류로 실패합니다."^] 오류에 대한 자세한 내용은 다음을 참조하세요.

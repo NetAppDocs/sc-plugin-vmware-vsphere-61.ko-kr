@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_extend_the_time_of_a_guest_file_restore_session.html 
+keywords:  
+summary: 기본적으로 첨부된 게스트 파일 복원 VMDK는 24시간 동안 사용할 수 있으며 그 이후에는 자동으로 분리됩니다.  게스트 구성 페이지에서 시간을 연장할 수 있습니다. 
+---
+= 게스트 파일 복구 세션 시간 연장
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+기본적으로 첨부된 게스트 파일 복원 VMDK는 24시간 동안 사용할 수 있으며 그 후에는 자동으로 분리됩니다.  *게스트 구성* 페이지에서 시간을 연장할 수 있습니다.
+
+.이 작업에 관하여
+나중에 첨부된 VMDK에서 추가 파일이나 폴더를 복원하려면 게스트 파일 복원 세션을 확장하는 것이 좋습니다.  하지만 게스트 파일 복구 세션은 많은 리소스를 사용하므로 세션 시간 연장은 가끔씩만 수행해야 합니다.
+
+.단계
+. VMware vSphere 클라이언트에서 *게스트 파일 복원*을 선택합니다.
+. 게스트 파일 복원 세션을 선택한 다음 게스트 세션 모니터 제목 표시줄에서 선택한 게스트 세션 확장 아이콘을 선택합니다.
++
+세션이 24시간 더 연장됩니다.
+
+

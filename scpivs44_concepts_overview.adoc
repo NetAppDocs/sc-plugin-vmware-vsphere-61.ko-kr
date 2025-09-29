@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_concepts_overview.html 
+keywords:  
+summary: 'SnapCenter Plug-in for VMware vSphere VM 및 데이터 저장소에 대한 데이터 보호 서비스를 제공하고 SnapCenter 애플리케이션 기반 플러그인에 대한 데이터 보호 서비스를 지원하는 독립형 가상 어플라이언스(Open Virtual Appliance 형식)입니다.  이 문서에서는 SnapCenter Plug-in for VMware vSphere 배포하고 사용하는 방법을 설명하고 빠른 시작 정보를 제공합니다.' 
+---
+= 제품 개요
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revnumber: 
+:revdate: and supports data protection services for SnapCenter application-based plug-ins. This document describes how to deploy and use SnapCenter Plug-in for VMware vSphere and includes quick start information.
+
+
+SnapCenter Plug-in for VMware vSphere Linux 기반 가상 어플라이언스로 배포됩니다.
+
+SnapCenter Plug-in for VMware vSphere 사용자 환경에 다음과 같은 기능을 추가합니다.
+
+* VM 일관성 및 충돌 일관성을 갖춘 데이터 보호 작업을 지원합니다.
++
+vCenter의 VMware vSphere 클라이언트 GUI를 사용하여 VMware 가상 머신(기존 VM 및 vVol VM), VMDK 및 데이터 저장소의 모든 백업 및 복원 작업을 수행할 수 있습니다. vVol VM(vVol 데이터 저장소의 VM)의 경우 충돌 일관성 백업만 지원됩니다. VM과 VMDK를 복원하고 게스트 OS에 있는 파일과 폴더도 복원할 수 있습니다.
+
++
+VM, VMDK 및 데이터 저장소를 백업할 때 플러그인은 RDM을 지원하지 않습니다.  VM에 대한 백업 작업은 RDM을 무시합니다.  RDM을 백업해야 하는 경우 SnapCenter 애플리케이션 기반 플러그인을 사용해야 합니다.
+
++
+SnapCenter Plug-in for VMware vSphere SnapCenter Plug-in for VMware vSphere 메타데이터가 포함된 MySQL 데이터베이스가 포함되어 있습니다.  VM 일관성 및 충돌 일관성을 갖춘 데이터 보호를 위해 SnapCenter Server를 설치할 필요가 없습니다.
+
+* 애플리케이션 일관성(VMDK/RDM을 통한 애플리케이션) 데이터 보호 작업에 대한 지원.
++
+VM의 기본 및 보조 스토리지에 있는 데이터베이스와 파일 시스템의 모든 백업 및 복원 작업에 SnapCenter GUI와 적절한 SnapCenter 애플리케이션 플러그인을 사용할 수 있습니다.
+
++
+SnapCenter VMDK, 원시 장치 매핑(RDM), NFS 데이터 저장소의 모든 데이터 보호 작업에 SnapCenter Plug-in for VMware vSphere 기본적으로 활용합니다.  가상 어플라이언스가 배포된 후 플러그인은 vCenter와의 모든 상호 작용을 처리합니다.  SnapCenter Plug-in for VMware vSphere 모든 SnapCenter 애플리케이션 기반 플러그인을 지원합니다.
+
++
+SnapCenter 데이터베이스와 VM의 단일 스냅샷을 함께 지원하지 않습니다. VM과 데이터베이스에 대한 백업은 독립적으로 예약하고 실행해야 하므로 데이터베이스와 VM이 동일한 볼륨에 호스팅되어 있더라도 별도의 스냅샷이 생성됩니다. SnapCenter GUI를 사용하여 데이터베이스 애플리케이션 백업을 예약하고, VMware vSphere 클라이언트 GUI를 사용하여 VM 및 데이터 저장소 백업을 예약합니다.
+
+* VM 일관성 스냅샷에는 VMware 도구가 필요합니다.
++
+VMware 도구가 설치되어 실행 중이 아니면 파일 시스템이 정지되지 않고 충돌에 대한 일관성을 유지하는 스냅샷이 생성됩니다.
+
+* SAN(VMFS) 환경에서 복원 작업을 수행하려면 VMware Storage vMotion이 필요합니다.
++
+VMware 파일 시스템(VMFS)의 복원 워크플로는 VMware Storage vMotion 기능을 활용합니다.  Storage vMotion은 vSphere Standard 라이선스의 일부이지만 vSphere Essentials 또는 Essentials Plus 라이선스에서는 사용할 수 없습니다.
+
++
+NFS 환경에서 대부분의 복원 작업은 기본 ONTAP 기능(예: Single File SnapRestore)을 사용하며 VMware Storage vMotion이 필요하지 않습니다.
+
+* VMware vVol VM을 구성하려면 ONTAP tools for VMware vSphere 필요합니다.
++
+ONTAP 도구를 사용하면 ONTAP 과 VMware 웹 클라이언트에서 vVols 의 스토리지를 프로비저닝하고 구성할 수 있습니다.
+
++
+자세한 내용은 ONTAP tools for VMware vSphere 설명서를 참조하세요. 또한 다음을 참조하세요. https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 상호 운용성 매트릭스 도구"^] ONTAP 도구에서 지원되는 버전에 대한 최신 정보를 확인하세요.
+
+* SnapCenter Plug-in for VMware vSphere Linux VM의 가상 어플라이언스로 배포됩니다.
++
+가상 어플라이언스는 Linux VM으로 설치해야 하지만 SnapCenter Plug-in for VMware vSphere Windows 기반 vCenter와 Linux 기반 vCenter를 모두 지원합니다.  SnapCenter 기본적으로 사용자 개입 없이 이 플러그인을 사용하여 vCenter와 통신하고 Windows 및 Linux 가상화 애플리케이션에서 데이터 보호 작업을 수행하는 SnapCenter 애플리케이션 기반 플러그인을 지원합니다.
+
+
+
+이러한 주요 기능 외에도 SnapCenter Plug-in for VMware vSphere iSCSI, 파이버 채널, FCoE, NFS 3.0/4.1, VMFS 5.0/6.0, NVMe over FC, NVMe over TCP에 대한 지원도 제공합니다.
+
+지원되는 버전에 대한 최신 정보는 다음을 참조하세요. https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["NetApp 상호 운용성 매트릭스 도구"^] (IMT).
+
+NFS 프로토콜과 ESXi 호스트에 대한 자세한 내용은 VMware에서 제공하는 vSphere Storage 설명서를 참조하세요.
+
+SnapCenter 데이터 보호에 대한 정보는 SnapCenter 플러그인의 데이터 보호 정보를 참조하세요. http://docs.netapp.com/us-en/snapcenter/index.html["SnapCenter 문서"^] .
+
+지원되는 업그레이드 및 마이그레이션 경로에 대한 정보는 다음을 참조하세요.link:scpivs44_release_notes.html["SnapCenter Plug-in for VMware vSphere 릴리스 노트"^] .

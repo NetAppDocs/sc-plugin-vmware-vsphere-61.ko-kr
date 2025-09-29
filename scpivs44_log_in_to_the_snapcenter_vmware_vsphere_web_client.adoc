@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_log_in_to_the_snapcenter_vmware_vsphere_web_client.html 
+keywords:  
+summary: SnapCenter Plug-in for VMware vSphere 배포하면 vCenter에 VMware vSphere 클라이언트가 설치되고, 이 클라이언트는 다른 vSphere 클라이언트와 함께 vCenter 화면에 표시됩니다. 
+---
+= SnapCenter VMware vSphere 클라이언트에 로그인합니다.
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+SnapCenter Plug-in for VMware vSphere 배포하면 vCenter에 VMware vSphere 클라이언트가 설치되고, 이 클라이언트는 다른 vSphere 클라이언트와 함께 vCenter 화면에 표시됩니다.
+
+.시작하기 전에
+vCenter에서 TLS(전송 계층 보안)를 활성화해야 합니다.  VMware 설명서를 참조하세요.
+
+.단계
+. 브라우저에서 VMware vSphere vCenter로 이동합니다.
+. *VMware vCenter Single Sign-On* 페이지에 로그인합니다.
++
+
+IMPORTANT: *로그인* 버튼을 선택하세요.  알려진 VMware 문제로 인해 ENTER 키를 사용하여 로그인하지 마세요. 자세한 내용은 ESXi Embedded Host Client 문제에 대한 VMware 설명서를 참조하세요.
+
+. *VMware vSphere 클라이언트* 페이지에서 도구 모음의 메뉴를 선택한 다음 * SnapCenter Plug-in for VMware vSphere*을 선택합니다.
+

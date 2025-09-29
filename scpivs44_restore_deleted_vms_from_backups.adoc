@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_deleted_vms_from_backups.html 
+keywords:  
+summary: 데이터스토어 기본 또는 보조 백업에서 삭제된 VM을 선택한 ESXi 호스트로 복원할 수 있습니다. 
+---
+= 백업에서 삭제된 VM 복원
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+데이터스토어 기본 또는 보조 백업에서 삭제된 VM을 선택한 ESXi 호스트로 복원할 수 있습니다.
+
+다음 위치에 VM을 복원할 수 있습니다.
+
+* 원래 위치로 복원
++
+** 원래 ESXi 호스트에 마운트된 원래 데이터 저장소(이것은 VM의 복사본을 만듭니다)
+
+
+* 대체 위치로 복원
++
+** 원래 ESXi 호스트에 마운트된 다른 데이터 저장소로
+** 동일한 vCenter에서 관리하는 다른 ESXi 호스트에 마운트된 원래 데이터 저장소로
+** 동일한 vCenter에서 관리하는 다른 ESXi 호스트에 마운트된 다른 데이터 저장소로
+** 다른 vCenter에서 연결된 모드로 관리되는 다른 ESXi 호스트에 마운트된 다른 데이터 저장소로
+
+
+
+
+
+NOTE: 다른 위치로 복원할 경우 SnapCenter Plug-in for VMware vSphere 복원 작업의 대상인 연결된 vCenter에서 실행되어야 합니다.  대상 데이터 저장소에는 충분한 공간이 있어야 합니다.
+
+
+NOTE: vVol VM을 대체 위치로 복원할 수 없습니다.
+
+
+NOTE: 삭제된 VM을 복원할 때 해당 VM에 원래 할당된 태그나 폴더는 복원되지 않습니다.
+
+.시작하기 전에
+* VMware vSphere 클라이언트의 스토리지 시스템 페이지에서 스토리지 시스템의 사용자 계정에는 다음이 있어야 합니다.link:scpivs44_minimum_ontap_privileges_required.html["ONTAP 에 필요한 최소 ONTAP 권한"] .
+* vCenter의 사용자 계정에는 다음이 있어야 합니다.link:scpivs44_minimum_vcenter_privileges_required.html["SnapCenter Plug-in for VMware vSphere 에 필요한 최소 vCenter 권한"] .
+* 백업이 반드시 존재해야 합니다.
++
+해당 VM에서 VMDK를 복원하려면 먼저 SnapCenter Plug-in for VMware vSphere 사용하여 VM의 백업을 만들어야 합니다.
+
+
+
+
+TIP: NFS 환경에서 복원 작업의 성능을 향상시키려면 VMware 애플리케이션 vStorage API for Array Integration(VAAI)을 활성화하세요.
+
+.이 작업에 관하여
+데이터 저장소는 복원할 수 없지만 데이터 저장소에 있는 모든 VM은 복원할 수 있습니다.
+
+VM이 있는 FabricPool 의 스토리지 계층을 사용할 수 없는 경우 복원 작업이 실패할 수 있습니다.
+
+.단계
+. vCenter Server에서 *인벤토리* > *데이터스토어*로 이동하여 데이터스토어를 선택합니다.
+. SnapCenter Plug-in for VMware vSphere 에서 *구성* > *백업*을 선택합니다.
+. 백업을 두 번 클릭하면 백업에 포함된 모든 VM 목록이 표시됩니다.
+. 백업 목록에서 삭제된 VM을 선택하고 *복원*을 선택합니다.
+. *복원* 마법사의 *백업 선택* 페이지에서 복원하려는 백업 사본을 선택합니다.
++
+특정 백업 이름이나 일부 백업 이름을 검색할 수도 있고, 필터 아이콘을 선택하고 날짜 및 시간 범위를 선택한 다음, VMware 스냅샷이 포함된 백업을 원하는지 여부, 마운트된 백업을 원하는지 여부, 위치를 선택하여 백업 목록을 필터링할 수 있습니다.  *확인*을 선택하여 마법사로 돌아갑니다.
+
+. *범위 선택* 페이지에서 *복원 범위* 필드에서 *전체 가상 머신*을 선택한 다음, 복원 위치를 선택하고 백업을 마운트할 대상 ESXi 호스트 정보를 입력합니다.
++
+복원 대상은 SnapCenter 에 추가된 모든 ESXi 호스트가 될 수 있습니다.  이 옵션은 지정된 시간과 날짜의 스냅샷에서 VM이 상주했던 선택된 백업의 내용을 복원합니다.  이 옵션을 선택하면 *VM 다시 시작* 확인란이 선택되고 VM의 전원이 켜집니다.
+
++
+ESXi 클러스터에 있는 대체 ESXi 호스트에 NFS 데이터 저장소의 VM을 복원하는 경우, VM이 복원된 후 대체 호스트에 등록됩니다.
+
+. *위치 선택* 페이지에서 복원하려는 백업 위치(기본 또는 보조)를 선택합니다.
+. 요약 페이지를 검토한 후 *마침*을 선택하세요.
+

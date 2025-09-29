@@ -1,0 +1,29 @@
+---
+permalink: scv_releasenotes_whats_new.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, scv, 6.1' 
+summary: SnapCenter Plug-in for VMware vSphere 에서 사용할 수 있는 새로운 기능에 대해 알아보세요. 
+---
+= SnapCenter Plug-in for VMware vSphere 의 새로운 기능
+:allow-uri-read: 
+
+
+[role="lead"]
+* ASA r2 시스템의 VM 및 VMFS 데이터 저장소 지원*
+
+VMware vSphere 6.1 릴리스용 SnapCenter 플러그인은 ASA r2 시스템에서 가상 머신(VM)과 VMFS 데이터 저장소의 프로비저닝을 지원합니다.  ASA r2 시스템은 SAN 전용 고객의 요구 사항에 맞춰 간소화된 환경을 만드는 통합 하드웨어 및 소프트웨어 솔루션을 제공합니다.  ASA r2 시스템의 VM, 데이터 저장소 및 VMDK(가상 머신 디스크)에 대한 SnapCenter Plug-in for VMware vSphere 다음과 같습니다.
+
+* 기본 보호를 위한 일관성 그룹 프로비저닝
+* 일관성 그룹 기반 백업
+* 워크플로 복제
+* 워크플로 복원
+* 리소스 그룹을 생성하거나 수정할 때 보조 보호 프로비저닝을 수행합니다.
++
+
+NOTE: 2차 보호는 ONTAP 9.16.1 이상 버전에서만 지원됩니다.
+
+
+
+*보조 변조 방지 스냅샷(TPS) 지원*
+
+SnapCenter Plug-in for VMware vSphere 보조 TPS에 대한 지원을 도입하여 랜섬웨어 공격자나 사기성 관리자가 보조 스냅샷 사본을 삭제하거나 변경하는 것을 방지하고 공격 후에도 해당 사본을 사용할 수 있도록 보장합니다.
