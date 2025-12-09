@@ -152,9 +152,6 @@ NVMe over TCP 및 NVMe over FC 프로토콜 지원을 위한 최소 소프트웨
 
 
 | SnapCenter Plug-in for VMware vSphere 의 최소 하드 드라이브 공간 | 100GB 
-
-
-| 어플라이언스의 vmcontrol 서비스의 최대 힙 크기 | 8GB 
 |===
 
 
