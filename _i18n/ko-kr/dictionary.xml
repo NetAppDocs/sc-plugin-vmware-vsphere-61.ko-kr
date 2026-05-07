@@ -307,7 +307,6 @@
   <block id="110328d238985c18e0a7947b09b1ff0f" category="summary">SnapCenter Plug-in for VMware vSphere 클라이언트 브라우저와의 안전한 통신을 위해 SSL 암호화를 사용합니다.  이렇게 하면 네트워크를 통해 암호화된 데이터를 전송할 수 있지만, 새로운 자체 서명 인증서를 만들거나 자체 인증 기관(CA) 인프라 또는 타사 CA를 사용하면 인증서가 사용자 환경에서 고유하게 유지됩니다.</block>
   <block id="8fbcd736aac5b9c6baba8f4db349f50e" category="doc">인증서 생성 및 가져오기</block>
   <block id="9668b00eae1748d51afb7f725a15301a" category="inline-link">KB 문서: SnapCenter Plug-in for VMware vSphere 에 SSL 인증서를 생성 및/또는 가져오는 방법</block>
-  <block id="6886be2ac69a368a307204ccfa1e00d9" category="paragraph">참조하다<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block> 자세한 내용은.</block>
   <block id="0a4a3719bc7519d1162060e0f0e08f8a" category="doc">백업 정책 생성</block>
   <block id="a70216f52adf1eb56f9c607820ec2859" category="paragraph">백업 정책을 생성하려면 아래 지침을 따르세요.</block>
   <block id="bbe1604d17d5228e6cf954f520fbcea1" category="list-text">SCV 플러그인의 왼쪽 탐색 창에서 *정책*을 선택한 다음 *새 정책*을 선택합니다.</block>
@@ -768,8 +767,6 @@
   <block id="dde8b54fa4a91beedb7b736869c08569" category="cell">24GB</block>
   <block id="3cb874290f06f3c2d44ce2e858bb041f" category="cell">SnapCenter Plug-in for VMware vSphere 의 최소 하드 드라이브 공간</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="cell">100GB</block>
-  <block id="f8bce6aa95f5621d608c29e258b620d2" category="cell">어플라이언스의 vmcontrol 서비스의 최대 힙 크기</block>
-  <block id="af5700014f646d2567efa6288d85ab2b" category="cell">8GB</block>
   <block id="9a0980e2d2a75eb076f41f7a4d439162" category="section-title">연결 및 포트 요구 사항</block>
   <block id="3672cca688eb0474cd3fee2add1a2067" category="cell">포트 유형</block>
   <block id="99ddf0e823c1be51589f68696f62cf56" category="cell">사전 구성된 포트</block>
@@ -2173,4 +2170,5 @@
   <block id="c257f5c852c12409e63afb17104f69c5" category="sidebar">REST API</block>
   <block id="a3d53cfe9124531cb5f9bbfefe704326" category="sidebar">내장된 일정을 수정하기 위한 REST API 워크플로</block>
   <block id="3da6944b1baaec4beb70694ac307fd1f" category="sidebar">동일한 릴리스의 새 패치로 업그레이드</block>
+  <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">자세한 내용은<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block>을 참조하십시오.</block>
 </blocks>
