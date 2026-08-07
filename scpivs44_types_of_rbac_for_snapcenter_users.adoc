@@ -18,6 +18,7 @@ SnapCenter Plug-in for VMware vSphere 사용하는 경우 vCenter Server는 추�
 
 
 
+[[vcenter-server-rbac]]
 == vCenter 서버 RBAC
 
 이 보안 메커니즘은 VM 일관성, VM 충돌 일관성, SnapCenter 서버 애플리케이션 일관성(VMDK를 통한 애플리케이션) 작업을 포함하여 SnapCenter Plug-in for VMware vSphere 에서 수행하는 모든 작업에 적용됩니다.  이 수준의 RBAC는 vSphere 사용자가 가상 ​​머신(VM) 및 데이터 저장소와 같은 vSphere 개체에서 SnapCenter Plug-in for VMware vSphere 작업을 수행하는 기능을 제한합니다.
@@ -41,6 +42,7 @@ vSphere 관리자는 다음을 수행하여 vCenter Server RBAC를 설정합니�
 
 
 
+[[ontap-rbac]]
 == ONTAP RBAC
 
 이 보안 메커니즘은 SnapCenter Server 애플리케이션 일관성(VMDK를 통한 애플리케이션) 작업에만 적용됩니다.  이 수준은 특정 스토리지 시스템에서 데이터 저장소의 스토리지 백업과 같은 특정 스토리지 작업을 수행하는 SnapCenter 의 기능을 제한합니다.
@@ -55,6 +57,7 @@ vSphere 관리자는 다음을 수행하여 vCenter Server RBAC를 설정합니�
 
 
 
+[[validation-workflow-for-rbac-privileges]]
 == RBAC 권한에 대한 검증 워크플로
 
 다음 그림은 RBAC 권한(vCenter와 ONTAP 모두)에 대한 검증 워크플로우의 개요를 제공합니다.

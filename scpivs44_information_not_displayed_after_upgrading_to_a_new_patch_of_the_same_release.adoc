@@ -38,6 +38,7 @@ SnapCenter Plug-in for VMware vSphere 동일한 릴리스의 새로운 패치로
 
 
 
+[[workaround-if-you-already-upgraded-before-clearing-the-cache]]
 == 캐시를 지우기 전에 이미 업그레이드한 경우 해결 방법
 
 . SnapCenter Plug-in for VMware vSphere 에 로그인합니다.

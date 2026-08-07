@@ -41,6 +41,7 @@ summary: 대시보드에서 하나 이상의 작업에 대한 보고서를 요�
 
 
 
+[[types-of-reports-from-the-vmware-vsphere-client]]
 == VMware vSphere 클라이언트의 보고서 유형
 
 SnapCenter 용 VMware vSphere 클라이언트는 데이터 보호 작업과 플러그인 리소스 상태에 대한 세부 정보를 제공하는 사용자 정의 가능한 보고서 옵션을 제공합니다.  기본 보호에 대해서만 보고서를 생성할 수 있습니다.

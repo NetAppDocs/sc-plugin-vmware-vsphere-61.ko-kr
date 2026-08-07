@@ -20,6 +20,7 @@ SnapCenter Plug-in for VMware vSphere 사용하여 데이터스토어 백업에 
 
 
 
+[[to-mount-datastores-follow-this-workflow]]
 == 데이터 저장소를 마운트하려면 다음 워크플로를 따르세요.
 
 |===
@@ -46,6 +47,7 @@ availableEsxHosts` | `Get the list of Available Esxi Hosts`마운트 작업에 �
 |===
 
 
+[[to-unmount-datastores-follow-this-workflow]]
 == 데이터 저장소를 마운트 해제하려면 다음 워크플로를 따르세요.
 
 |===

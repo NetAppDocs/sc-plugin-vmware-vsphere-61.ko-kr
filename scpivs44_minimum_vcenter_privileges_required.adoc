@@ -18,12 +18,14 @@ SnapCenter Plug-in for VMware vSphere 배포를 시작하기 전에 최소한 �
 
 
 
+[[required-privileges-for-vcenter-admin-role]]
 == vCenter 관리자 역할에 필요한 권한
 
 데이터 저장소.공간 할당 데이터 저장소.데이터 저장소 탐색.데이터 저장소 삭제.파일 관리 데이터 저장소.데이터 저장소 이동.확장자 이름 변경.확장자 등록.확장자 등록 취소.호스트 업데이트.구성.고급 구성 호스트.구성.리소스 호스트.구성.설정 호스트.구성.저장소 호스트.로컬.VM 생성 호스트.로컬.VM 삭제 호스트.로컬.VM 재구성 네트워크.리소스 할당.권장 사항 적용 리소스.VMToPool 할당 리소스.콜드 마이그레이션 리소스.핫 마이그레이션 리소스.쿼리 VMotion 시스템.익명 시스템.읽기 시스템.작업 보기.작업 생성.업데이트 VirtualMachine.구성.기존 디스크 추가 VirtualMachine.구성.새 디스크 추가 VirtualMachine.구성.고급 구성 VirtualMachine.구성.경로에서 다시 로드 VirtualMachine.구성.디스크 제거 VirtualMachine.구성.리소스 VirtualMachine.게스트 작업.실행 VirtualMachine.GuestOperations.Modify VirtualMachine.GuestOperations.Query VirtualMachine.Interact.PowerOff VirtualMachine.Interact.PowerOn VirtualMachine.Inventory.Create VirtualMachine.Inventory.CreateFromExisting VirtualMachine.Inventory.Delete VirtualMachine.Inventory.Move VirtualMachine.Inventory.Register VirtualMachine.Inventory.Unregister VirtualMachine.State.CreateSnapshot VirtualMachine.State.RemoveSnapshot VirtualMachine.State.RevertToSnapshot
 
 
 
+[[required-privileges-specific-to-snapcenter-plug-in-for-vmware-vcenter]]
 == VMware vCenter용 SnapCenter 플러그인에 필요한 특정 권한
 
 |===

@@ -18,6 +18,7 @@ Windows 게스트 OS의 가상 머신 디스크(VMDK)에서 파일이나 폴더�
 
 
 
+[[guest-restore-workflow]]
 == 게스트 복원 워크플로
 
 게스트 OS 복원 작업에는 다음 단계가 포함됩니다.
@@ -48,6 +49,7 @@ Windows 게스트 OS의 가상 머신 디스크(VMDK)에서 파일이나 폴더�
 
 
 
+[[prerequisites-for-restoring-guest-files-and-folders]]
 == 게스트 파일 및 폴더 복원을 위한 전제 조건
 
 Windows 게스트 OS의 VMDK에서 하나 이상의 파일이나 폴더를 복원하기 전에 모든 요구 사항을 알아야 합니다.
@@ -89,6 +91,7 @@ Linux 게스트 OS를 실행하는 VM에서는 파일과 폴더를 복원할 수
 
 
 
+[[guest-file-restore-limitations]]
 == 게스트 파일 복원 제한 사항
 
 게스트 OS에서 파일이나 폴더를 복원하기 전에 해당 기능이 지원하지 않는 사항이 무엇인지 알아야 합니다.

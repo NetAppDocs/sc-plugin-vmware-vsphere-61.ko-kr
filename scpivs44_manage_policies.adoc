@@ -18,6 +18,7 @@ SnapCenter Plug-in for VMware vSphere 대한 백업 정책을 만들고, 수정�
 
 
 
+[[detach-policies]]
 == 정책 분리
 
 더 이상 해당 정책으로 리소스의 데이터 보호를 관리하지 않으려면 SnapCenter Plug-in for VMware vSphere 에서 정책을 분리할 수 있습니다.  정책을 제거하거나 일정 빈도를 수정하려면 먼저 정책을 분리해야 합니다.
@@ -36,6 +37,7 @@ SnapCenter Plug-in for VMware vSphere 에서 정책을 분리하기 위한 지�
 
 
 
+[[modify-policies]]
 == 정책 수정
 
 SnapCenter Plug-in for VMware vSphere 의 정책을 수정할 수 있습니다.  정책이 리소스 그룹에 연결되어 있는 동안 빈도, 복제 옵션, 스냅샷 보존 설정 또는 스크립트 정보를 수정할 수 있습니다.
@@ -68,6 +70,7 @@ NOTE: SnapCenter Plug-in for VMware vSphere 수정하려면 플러그인 리소�
 
 
 
+[[delete-policies]]
 == 정책 삭제
 
 SnapCenter Plug-in for VMware vSphere 대해 구성된 백업 정책이 더 이상 필요하지 않은 경우 이를 삭제하는 것이 좋습니다.

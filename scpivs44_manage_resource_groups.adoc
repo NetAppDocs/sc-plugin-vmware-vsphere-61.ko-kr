@@ -21,6 +21,7 @@ NOTE: 리소스 그룹은 VSC(Virtual Storage Console)에서 백업 작업이라
 
 
 
+[[suspend-and-resume-operations-on-resource-groups]]
 == 리소스 그룹에서 작업 일시 중단 및 재개
 
 리소스 그룹에서 예약된 작업이 시작되지 않도록 일시적으로 비활성화할 수 있습니다. 나중에 원할 때 해당 작업을 활성화할 수 있습니다.
@@ -37,6 +38,7 @@ NOTE: 리소스 그룹은 VSC(Virtual Storage Console)에서 백업 작업이라
 
 
 
+[[modify-resource-groups]]
 == 리소스 그룹 수정
 
 vCenter의 리소스 그룹에서 리소스를 제거하거나 추가하고, 정책을 분리하거나 연결하고, 일정을 수정하거나 다른 리소스 그룹 옵션을 수정할 수 있습니다.
@@ -57,6 +59,7 @@ vCenter의 리소스 그룹에서 리소스를 제거하거나 추가하고, 정
 
 
 
+[[delete-resource-groups]]
 == 리소스 그룹 삭제
 
 더 이상 리소스 그룹의 리소스를 보호할 필요가 없으면 vCenter에서 리소스 그룹을 삭제할 수 있습니다.  vCenter에서 SnapCenter Plug-in for VMware vSphere 제거하기 전에 모든 리소스 그룹이 삭제되었는지 확인해야 합니다.

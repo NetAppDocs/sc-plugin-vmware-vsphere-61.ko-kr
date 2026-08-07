@@ -18,6 +18,7 @@ VMware vSphere 클라이언트를 사용하여 VM이나 데이터 저장소를 �
 
 
 
+[[modify-storage-vms]]
 == 스토리지 VM 수정
 
 VMware vSphere 클라이언트를 사용하면 SnapCenter Plug-in for VMware vSphere 에 등록되어 VM 데이터 보호 작업에 사용되는 클러스터 및 스토리지 VM의 구성을 수정할 수 있습니다.
@@ -35,6 +36,7 @@ IMPORTANT: SnapCenter GUI를 사용하여 애플리케이션 기반 데이터 �
 
 
 
+[[remove-storage-vms]]
 == 스토리지 VM 제거
 
 VMware vSphere 클라이언트를 사용하여 vCenter의 인벤토리에서 스토리지 VM을 제거할 수 있습니다.

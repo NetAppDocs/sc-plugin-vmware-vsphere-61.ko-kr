@@ -20,6 +20,7 @@ summary: 운영 효율성을 개선하려면 scbr.override 구성 파일을 수�
 
 
 
+[[create-the-scbr-override-configuration-file]]
 == scbr.override 구성 파일을 만듭니다.
 
 . 로 가다 `/opt/netapp/scvservice/standalone_aegis/etc/scbr/scbr.override-template` .
@@ -28,6 +29,7 @@ summary: 운영 효율성을 개선하려면 scbr.override 구성 파일을 수�
 
 
 
+[[properties-you-can-override]]
 == 재정의할 수 있는 속성
 
 * 기본적으로 템플릿은 해시 기호를 사용하여 구성 속성에 주석을 달습니다.  속성을 사용하여 구성 값을 수정하려면 다음을 제거해야 합니다. `#` 문자.

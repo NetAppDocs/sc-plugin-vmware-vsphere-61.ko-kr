@@ -21,6 +21,7 @@ NOTE: VMware용 SnapCenter 플러그인(SCV) 5.0부터 SCV에 대한 사용자 �
 
 
 
+[[minimum-ontap-privileges-required]]
 == 최소 ONTAP 권한이 필요합니다.
 
 모든 SnapCenter 플러그인에는 다음과 같은 최소 권한이 필요합니다.
@@ -70,6 +71,7 @@ NOTE: 지원되지 않는 vServer 명령에 대한 경고 메시지는 무시할
 
 
 
+[[additional-ontap-information]]
 == 추가 ONTAP 정보
 
 * SnapMirror Active Sync 기능을 사용하려면 ONTAP 9.12.1 이상 버전이 필요합니다.
